@@ -16,7 +16,7 @@ A demo project featuring a React application, a custom caching fetch library, an
 
 The UI displays a simple directory of people.  
 - On `/appWithoutSSRData`, you see a list of people fetched on the client.
-- On `/appWithSSRData`, you see the same list, but rendered server-side (SSR) for fast, SEO-friendly loads.
+- On `/appWithSSRData`, you see the same list, but rendered server-side (SSR).
 - Each person entry shows their name, email, address, and balance.
 
 ---
@@ -25,7 +25,7 @@ The UI displays a simple directory of people.
 
 ### Prerequisites
 
-- Node.js (>=16)
+- Node.js
 - npm
 
 ### Setup
@@ -92,8 +92,6 @@ Implements:
 - `preloadCachingFetch(url)`: Preloads data for SSR.
 - `serializeCache()`, `initializeCache()`, `wipeCache()`: Cache management utilities.
 
-See code comments for API details.
-
 ---
 
 ## Error Handling
@@ -104,17 +102,16 @@ If a rendering error occurs anywhere in the component tree, a user-friendly erro
 ## Known Issues / Next Steps
 
 - Basic unit and integration tests are implemented using Jest and React Testing Library (see `__tests__`), but no e2e tests yet.
-- Basic professional styling has been added using CSS for a modern card layout.
+- Basic professional styling has been added using CSS.
 - Basic error handling is implemented via an error boundary.
 - No production build script.
 - No deployment configuration.
 - No authentication or authorization.
 - Consider adding CI/CD (e.g., GitHub Actions).
 - Consider stricter TypeScript settings.
-- Consider adding Husky for pre-commit hooks.
 
 ---
 
 ## License
 
-MIT (add your license here)
+MIT
