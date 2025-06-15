@@ -6,6 +6,7 @@ import {
 import Person from './Person';
 import { validateData } from './validation';
 import './App.css';
+import ErrorBoundary from './ErrorBoundary';
 
 type Application = FC & {
   preLoadServerData?: () => Promise<void>;
@@ -25,12 +26,14 @@ const App: Application = () => {
   const data = validateData(rawData);
 
   return (
-    <div className="app-container">
-      <h1 className="people-title">Welcome to the People Directory</h1>
-      {data.map((person, index) => (
-        <Person key={person.email} index={index} />
-      ))}
-    </div>
+    <ErrorBoundary>
+      <div className="app-container">
+        <h1 className="people-title">Welcome to the People Directory</h1>
+        {data.map((person, index) => (
+          <Person key={person.email} index={index} />
+        ))}
+      </div>
+    </ErrorBoundary>
   );
 };
 

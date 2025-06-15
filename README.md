@@ -96,14 +96,19 @@ See code comments for API details.
 
 ---
 
+## Error Handling
+
+A basic error boundary is implemented in `application/ErrorBoundary.tsx` and used in the main `App` component.  
+If a rendering error occurs anywhere in the component tree, a user-friendly error message will be displayed.
+
 ## Known Issues / Next Steps
 
 - Basic unit and integration tests are implemented using Jest and React Testing Library (see `__tests__`), but no e2e tests yet.
 - Basic professional styling has been added using CSS for a modern card layout.
+- Basic error handling is implemented via an error boundary.
 - No production build script.
 - No deployment configuration.
 - No authentication or authorization.
-- Error handling is basic.
 - Consider adding CI/CD (e.g., GitHub Actions).
 - Consider stricter TypeScript settings.
 - Consider adding Husky for pre-commit hooks.
