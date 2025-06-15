@@ -1,0 +1,62 @@
+body {
+  background: #f4f6fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 2em;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.people-title {
+  text-align: center;
+  color: #2a4d9b;
+  margin-bottom: 2em;
+  font-size: 2.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.person-card {
+  background: #f7f9fc;
+  border: 1px solid #e3e7ed;
+  border-radius: 8px;
+  padding: 1.2em 1.5em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s;
+}
+
+.person-card:hover {
+  box-shadow: 0 6px 18px rgba(44, 62, 80, 0.08);
+}
+
+.person-name {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #1a2a4d;
+  margin-bottom: 0.2em;
+}
+
+.person-email {
+  color: #3b5998;
+  margin-bottom: 0.1em;
+  font-size: 0.98em;
+}
+
+.person-address {
+  color: #555;
+  margin-bottom: 0.1em;
+  font-size: 0.97em;
+}
+
+.person-balance {
+  font-weight: 500;
+  color: #2a4d9b;
+  margin-top: 0.3em;
+  font-size: 1em;
+}

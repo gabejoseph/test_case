@@ -4,8 +4,6 @@ import { validateData } from './validation';
 import Name from './Name';
 
 const Person: FC<{ index: number }> = ({ index }) => {
-  // We are intentionally passing down the index prop to the Person component
-  // To simulate the useCachingFetch hook being used in different locations
   const {
     data: rawData,
     isLoading,
@@ -21,12 +19,14 @@ const Person: FC<{ index: number }> = ({ index }) => {
   const person = data[index];
 
   return (
-    <div>
-      <Name index={index} />
-      <p>{person.email}</p>
-      <p>{person.address}</p>
-      <p>{person.balance}</p>
-      <p>{person.created}</p>
+    <div className="person-card">
+      <div className="person-name">
+        <Name index={index} />
+      </div>
+      <div className="person-email">{person.email}</div>
+      <div className="person-address">{person.address}</div>
+      <div className="person-balance">Balance: {person.balance}</div>
+      <div style={{ color: '#888', fontSize: '0.92em', marginTop: '0.2em' }}>{person.created}</div>
     </div>
   );
 };

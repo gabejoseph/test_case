@@ -98,7 +98,8 @@ See code comments for API details.
 
 ## Known Issues / Next Steps
 
-- No e2e or integration tests yet.
+- Basic unit and integration tests are implemented using Jest and React Testing Library (see `__tests__`), but no e2e tests yet.
+- Basic professional styling has been added using CSS for a modern card layout.
 - No production build script.
 - No deployment configuration.
 - No authentication or authorization.

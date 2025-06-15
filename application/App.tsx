@@ -5,6 +5,7 @@ import {
 } from '../caching-fetch-library/cachingFetch';
 import Person from './Person';
 import { validateData } from './validation';
+import './App.css';
 
 type Application = FC & {
   preLoadServerData?: () => Promise<void>;
@@ -24,8 +25,8 @@ const App: Application = () => {
   const data = validateData(rawData);
 
   return (
-    <div>
-      <h1>Welcome to the People Directory</h1>
+    <div className="app-container">
+      <h1 className="people-title">Welcome to the People Directory</h1>
       {data.map((person, index) => (
         <Person key={person.email} index={index} />
       ))}
